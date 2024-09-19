@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Confirmação do Pedido</h2>
+<div>
+    <h3>Obrigado pela sua compra!</h3>
+    <p>Seu pedido foi finalizado com sucesso. Aqui estão os detalhes do seu pedido:</p>
+    
+    {% if carrinho %}
+        <ul>
+            {% for item in carrinho %}
+                <li>
+                    <img src="{{ url_for('static', filename=item['imagem']) }}" alt="{{ item['nome'] }}" style="width: 100px; height: auto; margin-right: 10px;">
+                    {{ item['nome'] }} - R$ {{ item['preco'] }}
+                </li>
+            {% endfor %}
+        </ul>
+        <h3>Total: R$ {{ total }}</h3>
+    {% else %}
+        <p>Seu carrinho está vazio.</p>
+    {% endif %}
+    
+    <a href="{{ url_for('home') }}" class="btn-home">Voltar para a Home</a>
+</div>
+{% endblock %}
+

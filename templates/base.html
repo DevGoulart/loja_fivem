@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Goulartz</title>
+</head>
+<body>
+    <header>
+        <h1>Goulartz</h1>
+        <nav>
+            <a href="{{ url_for('home') }}" class="{% if request.path == '/' %}active{% endif %}">Home</a>
+            <a href="{{ url_for('sobre') }}" class="{% if request.path == '/sobre' %}active{% endif %}">Sobre</a>
+            <a href="{{ url_for('produtos_page') }}" class="{% if request.path == '/produtos' %}active{% endif %}">Produtos</a>
+            <a href="{{ url_for('carrinho_page') }}" class="{% if request.path == '/carrinho' %}active{% endif %}">Carrinho</a>
+        </nav>
+    </header>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <p>&copy; 2024 Goulartz. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
