@@ -126,7 +126,7 @@ p {
 /* Rodapé */
 footer {
     background-color: #000000; /* Fundo preto */
-    color: white !important; /* Texto branco */
+    color: white; /* Texto branco */
     text-align: center;
     padding: 20px;
     position: relative;
