@@ -74,6 +74,11 @@ def remover_do_carrinho(produto_nome):
     
     return redirect(url_for('carrinho_page'))
 
+@app.route('/limpar_carrinho')
+def limpar_carrinho():
+    session.pop('carrinho', None)
+    return redirect(url_for('carrinho_page', message='Carrinho limpo!'))
+
 # Finalizar pedido
 @app.route('/finalizar')
 def finalizar_pedido():

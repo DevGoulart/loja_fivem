@@ -2,6 +2,10 @@
 {% block content %}
 <h2>Carrinho</h2>
 <div>
+    {% if message %}
+        <div class="notification">{{ message }}</div>
+    {% endif %}
+    
     {% if carrinho %}
         {% for item in carrinho %}
         <div class="cart-item">
@@ -19,6 +23,7 @@
 
         <div class="cart-actions">
             <a href="{{ url_for('finalizar_pedido') }}">Finalizar Pedido</a>
+            <a href="{{ url_for('limpar_carrinho') }}">Limpar Carrinho</a>
         </div>
     {% else %}
         <p>Seu carrinho está vazio.</p>
