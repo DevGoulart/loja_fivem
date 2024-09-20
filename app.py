@@ -60,6 +60,20 @@ def carrinho_page():
     total = sum(item['preco'] for item in carrinho)
     return render_template('carrinho.html', carrinho=carrinho, total=total)
 
+@app.route('/remover_do_carrinho/<produto_nome>', methods=['POST'])
+def remover_do_carrinho(produto_nome):
+    # Recupera o carrinho da sessão
+    carrinho = session.get('carrinho', [])
+    
+    # Remove o produto do carrinho, se existir
+    carrinho = [item for item in carrinho if item['nome'] != produto_nome]
+    
+    # Atualiza a sessão com o carrinho modificado
+    session['carrinho'] = carrinho
+    session.modified = True
+    
+    return redirect(url_for('carrinho_page'))
+
 # Finalizar pedido
 @app.route('/finalizar')
 def finalizar_pedido():

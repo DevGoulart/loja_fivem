@@ -7,6 +7,9 @@
         <div class="cart-item">
             <img src="{{ url_for('static', filename=item['imagem']) }}" alt="{{ item['nome'] }}">
             <p>{{ item['nome'] }} - R$ {{ item['preco'] }}</p>
+            <form action="{{ url_for('remover_do_carrinho', produto_nome=item['nome']) }}" method="post">
+                <button type="submit">Remover</button>
+            </form>
         </div>
         {% endfor %}
         

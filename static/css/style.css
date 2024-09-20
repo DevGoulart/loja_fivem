@@ -226,3 +226,16 @@ nav a.active {
 .add-to-cart-button:hover, .back-to-products:hover, .details-button:hover {
     background-color: #333;
 }
+
+.cart-item button {
+    background-color: #ff0000; /* Vermelho */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: #cc0000; /* Vermelho mais escuro */
+}
