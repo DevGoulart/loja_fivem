@@ -48,6 +48,11 @@ def logout():
     session.pop('username', None)
     return redirect(url_for('login'))
 
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    # Lógica para exibir e processar o formulário de registro de novos usuários
+    return render_template('register.html')
+
 # Página sobre
 @app.route('/sobre')
 def sobre():
