@@ -17,6 +17,7 @@
             <a href="{{ url_for('sobre') }}" class="{% if request.path == '/sobre' %}active{% endif %}">Sobre</a>
             <a href="{{ url_for('produtos_page') }}" class="{% if request.path == '/produtos' %}active{% endif %}">Produtos</a>
             <a href="{{ url_for('carrinho_page') }}" class="{% if request.path == '/carrinho' %}active{% endif %}">Carrinho</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
         </nav>
     </header>
     <div class="container">
