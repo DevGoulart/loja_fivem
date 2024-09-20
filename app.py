@@ -26,6 +26,14 @@ def sobre():
 def produtos_page():
     return render_template('produtos.html', produtos=produtos)
 
+@app.route('/produto/<produto_nome>')
+def produto_detalhes(produto_nome):
+    produto = next((p for p in produtos if p['nome'] == produto_nome), None)
+    if produto:
+        return render_template('produto_detalhes.html', produto=produto)
+    else:
+        return redirect(url_for('produtos_page'))
+
 # Adicionar produto ao carrinho
 @app.route('/adicionar_ao_carrinho/<produto_nome>')
 def adicionar_ao_carrinho(produto_nome):

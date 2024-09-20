@@ -4,10 +4,11 @@
 <div class="product-list">
     {% for produto in produtos %}
     <div class="product">
-        <img src="{{ url_for('static', filename=produto['imagem']) }}" alt="{{ produto['nome'] }}">
-        <p>{{ produto['nome'] }}</p>
-        <p>Preço: R$ {{ produto['preco'] }}</p> <!-- Exibindo o preço do produto -->
-        <a href="{{ url_for('adicionar_ao_carrinho', produto_nome=produto['nome']) }}">Adicionar ao carrinho</a>
+        <img src="{{ url_for('static', filename=produto['imagem']) }}" alt="{{ produto.nome }}">
+        <p>{{ produto.nome }}</p>
+        <p>Preço: R$ {{ produto.preco }}</p>
+        <a href="{{ url_for('adicionar_ao_carrinho', produto_nome=produto['nome']) }}" class="add-to-cart-button">Adicionar ao Carrinho</a>
+        <a href="{{ url_for('produto_detalhes', produto_nome=produto['nome']) }}" class="details-button">Mais Detalhes</a>
     </div>
     {% endfor %}
 </div>
