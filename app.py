@@ -58,6 +58,17 @@ def register():
 def sobre():
     return render_template('sobre.html')
 
+#contact
+@app.route('/contato', methods=['GET', 'POST'])
+def contato():
+    if request.method == 'POST':
+        nome = request.form['name']
+        email = request.form['email']
+        mensagem = request.form['message']
+        # Lógica para enviar ou processar a mensagem pode ser adicionada aqui
+        return "Mensagem enviada com sucesso!"
+    return render_template('contact.html')
+
 # Página de produtos
 @app.route('/produtos')
 def produtos_page():

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylecont.css') }}">
+</head>
+<body>
+    <div class="contact-container">
+        <h2>Entre em Contato</h2>
+        <p>Se você tiver dúvidas ou precisar de assistência, envie-nos uma mensagem.</p>
+        <form method="POST">
+            <div class="input-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
