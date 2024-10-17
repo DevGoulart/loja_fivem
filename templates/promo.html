@@ -42,6 +42,24 @@
         <a href="{{ url_for('home') }}" class="back-link">Voltar ao Início</a>
     </div>
 
+    <div class="chatbot-container" id="chatbot">
+        <div class="chat-header">
+            <h3>Assistente Virtual</h3>
+            <button id="close-chat">✖</button>
+        </div>
+        <div id="chat-body" class="chat-body">
+            <div class="message bot">Olá! Como posso te ajudar?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Digite sua mensagem..." />
+            <button id="send-btn">Enviar</button>
+        </div>
+    </div>
+
+    <button id="open-chat" class="open-chat-btn">Chat</button>
+
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+
     <script src="{{ url_for('static', filename='js/filter.js') }}"></script>
 </body>
 </html>
