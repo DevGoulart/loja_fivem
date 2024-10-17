@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosidades</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylecurio.css') }}">
+</head>
+<body>
+    <div class="curiosidades-container">
+        <h1>Curiosidades Interessantes</h1>
+        <p>Fique por dentro de fatos e histórias que você talvez não conheça!</p>
+
+        <div class="curiosidade-card">
+            <h2>1. Veículos Blindados</h2>
+            <p>A blindagem de veículos começou a ser popularizada na década de 1930, especialmente por líderes políticos que buscavam mais segurança.</p>
+        </div>
+
+        <div class="curiosidade-card">
+            <h2>2. Handling Ajustado</h2>
+            <p>Handling é tão importante que pequenas alterações podem reduzir em até 0,2 segundos o tempo de volta em uma pista profissional.</p>
+        </div>
+
+        <div class="curiosidade-card">
+            <h2>3. Personalização de Textura</h2>
+            <p>Personalizações visuais de veículos surgiram nos jogos de corrida, mas hoje são tendências no mundo real, com envelopamentos exclusivos.</p>
+        </div>
+
+        <a href="{{ url_for('home') }}" class="back-link">Voltar ao Início</a>
+    </div>
+</body>
+</html>

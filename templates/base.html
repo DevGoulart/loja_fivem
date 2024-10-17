@@ -15,6 +15,7 @@
         <nav>
             <a href="{{ url_for('home') }}" class="{% if request.path == '/' %}active{% endif %}">Home</a>
             <a href="{{ url_for('sobre') }}" class="{% if request.path == '/sobre' %}active{% endif %}">Sobre</a>
+            <a href="{{ url_for('curiosidades') }}" class="{% if request.path == '/curiosidades' %}active{% endif %}">Curiosidades</a>
             <a href="{{ url_for('contato') }}" class="{% if request.path == '/contato' %}active{% endif %}">Contato</a>
             <a href="{{ url_for('produtos_page') }}" class="{% if request.path == '/produtos' %}active{% endif %}">Produtos</a>
             <a href="{{ url_for('promocoes') }}" class="{% if request.path == '/promocoes' %}active{% endif %}">Promoções</a>

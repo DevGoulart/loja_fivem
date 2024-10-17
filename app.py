@@ -63,6 +63,11 @@ def sobre():
 def promocoes():
     return render_template('promo.html')
 
+#curiosidades
+@app.route('/curiosidades')
+def curiosidades():
+    return render_template('curiosidades.html')
+
 #contact
 @app.route('/contato', methods=['GET', 'POST'])
 def contato():
