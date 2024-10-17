@@ -25,7 +25,7 @@ produtos = [
 def home():
     # Verifica se o usuário está logado
     if 'username' in session:
-        return render_template('index.html')
+        return render_template('home.html')
     return redirect(url_for('login'))
 
 @app.route('/login', methods=['GET', 'POST'])
