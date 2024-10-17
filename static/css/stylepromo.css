@@ -90,3 +90,13 @@ body {
 .back-link:hover {
     background-color: #555; /* Cor mais clara ao passar o mouse */
 }
+
+.search-bar {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}

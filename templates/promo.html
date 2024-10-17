@@ -10,20 +10,22 @@
     <div class="promo-container">
         <h1>Promoções Especiais</h1>
         <p>Aproveite as ofertas por tempo limitado!</p>
-        
+
+        <input type="text" id="search" placeholder="Pesquise uma promoção..." class="search-bar">
+
         <div class="promo-grid">
             <div class="promo-card">
                 <img src="{{ url_for('static', filename='image/blindagem.jpg') }}" alt="Promoção 1">
                 <h2>Blindagem com 20% OFF</h2>
                 <p>Proteja seu veículo agora com desconto!</p>
             </div>
-            
+
             <div class="promo-card">
                 <img src="{{ url_for('static', filename='image/textura.jpeg') }}" alt="Promoção 2">
                 <h2>Texturas Personalizadas - R$50</h2>
                 <p>Deixe seu veículo único com nossas texturas exclusivas.</p>
             </div>
-            
+
             <div class="promo-card">
                 <img src="{{ url_for('static', filename='image/handling.jpg') }}" alt="Promoção 3">
                 <h2>Handling Ajustado por R$80</h2>
@@ -32,12 +34,14 @@
 
             <div class="promo-card">
                 <img src="{{ url_for('static', filename='image/pacote_completo.jpg') }}" alt="Promoção 4">
-                <h2>Pacote Completo Ajustado por R$150</h2>
-                <p>Experimente dirigibilidade impecável com nossa configuração.</p>
+                <h2>Pacote Completo por R$150</h2>
+                <p>Experimente o pacote completo e impecável com nossa configuração.</p>
             </div>
         </div>
 
         <a href="{{ url_for('home') }}" class="back-link">Voltar ao Início</a>
     </div>
+
+    <script src="{{ url_for('static', filename='js/filter.js') }}"></script>
 </body>
 </html>
