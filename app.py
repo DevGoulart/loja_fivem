@@ -58,6 +58,11 @@ def register():
 def sobre():
     return render_template('sobre.html')
 
+# Página FAQ
+@app.route('/faq')
+def faq():
+    return render_template('faq.html')
+
 #promoções
 @app.route('/promocoes')
 def promocoes():

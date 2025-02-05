@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Perguntas Frequentes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylefaq.css') }}">
+</head>
+<body>
+    <div class="faq-container">
+        <h1>Perguntas Frequentes</h1>
+        <p>Clique nas perguntas para ver a resposta.</p>
+
+        <div class="faq-item">
+            <div class="faq-question">O que é blindagem veicular?</div>
+            <div class="faq-answer">
+                Blindagem é uma técnica que protege veículos contra disparos de armas de fogo e impactos externos.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Como funciona a modificação de handling?</div>
+            <div class="faq-answer">
+                A modificação de handling ajusta a dirigibilidade do veículo, como velocidade e aderência nas curvas.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Quais são os tipos de personalização de textura?</div>
+            <div class="faq-answer">
+                Oferecemos envelopamento, texturas foscas e metálicas, além de personalizações exclusivas por encomenda.
+            </div>
+        </div>
+
+        <a href="{{ url_for('home') }}" class="back-link">Voltar ao Início</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/faq.js') }}"></script>
+</body>
+</html>
